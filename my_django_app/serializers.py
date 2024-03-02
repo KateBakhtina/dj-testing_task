@@ -67,12 +67,6 @@ class ProductSerializer(serializers.ModelSerializer):
             data_groups[title] = st_group
         return data_groups
 
-    def search_user(self, user, instance):
-        data = self.get_data_study_groups(instance)
-        for key, value in data.items():
-            if user in value:
-                return key, value
-
 
 
 
